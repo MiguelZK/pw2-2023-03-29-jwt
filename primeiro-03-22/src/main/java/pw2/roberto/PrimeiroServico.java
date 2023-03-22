@@ -2,6 +2,7 @@ package pw2.roberto;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -19,6 +20,7 @@ public class PrimeiroServico {
     @GET
     @Path("/{a}/{b}")
     @Produces(MediaType.TEXT_PLAIN)
+    @RolesAllowed("User")
     public int soma(@PathParam("a") int a, @PathParam("b") int b) {
 
         return servico.soma(a, b);
