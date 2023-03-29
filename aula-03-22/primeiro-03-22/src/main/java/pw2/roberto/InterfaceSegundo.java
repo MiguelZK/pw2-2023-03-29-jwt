@@ -10,7 +10,7 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@RegisterRestClient(baseUri = "http://localhost:8082/segundo")
+@RegisterRestClient(baseUri = "https://localhost:8445/segundo")
 @AccessToken
 public interface InterfaceSegundo {
 
